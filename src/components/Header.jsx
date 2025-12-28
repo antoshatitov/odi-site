@@ -23,8 +23,8 @@ const Header = () => {
     <header className="header">
       <div className="header__logo">
         <img
-          src="/prime-invest-logo.png"
-          alt="Прайм Инвест"
+          src="/odi-logo.png"
+          alt="ODI"
           className="header__logo-image"
         />
       </div>
@@ -41,14 +41,26 @@ const Header = () => {
         ))}
       </nav>
       <div className="header__contacts">
-        <a className="header__phone" href="tel:+79999999999">
-          +7 999 999-99-99
+        <a className="header__phone" href="tel:+79244422800">
+          +7 924 442-28-00
         </a>
         <div className="header__icons">
-          <a className="icon-btn" href="#" aria-label="Telegram">
+          <a
+            className="icon-btn"
+            href="https://t.me/o781781"
+            aria-label="Telegram"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaTelegramPlane />
           </a>
-          <a className="icon-btn" href="#" aria-label="WhatsApp">
+          <a
+            className="icon-btn"
+            href="https://wa.me/79244422800"
+            aria-label="WhatsApp"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaWhatsapp />
           </a>
         </div>

@@ -19,7 +19,6 @@ const Hero = () => {
     <section id="hero" className="hero">
       <div className="hero__overlay" />
       <div className="hero__content">
-        <p className="hero__eyebrow">Благовещенск, Амурская область</p>
         <h1 className="hero__title">Создаем уютные дома под ключ</h1>
         <p className="hero__subtitle">
           Вы утверждаете проект и заезжаете в готовое жилье. С фиксированной ценой и гарантией

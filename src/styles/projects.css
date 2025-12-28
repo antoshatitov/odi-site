@@ -1,0 +1,136 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: linear-gradient(180deg, #f7f9fc 0%, #f0f4fb 100%);
+  border-radius: 32px 32px 0 0;
+  margin-top: 24px;
+  padding-top: 72px;
+}
+
+.projects__heading h2 {
+  margin: 8px 0 0;
+  font-size: clamp(24px, 3vw + 8px, 36px);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--surface);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__slider {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-card__slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 16px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project-card__slide.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card__slide-label {
+  background: rgba(255, 255, 255, 0.86);
+  padding: 8px 12px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.project-card__controls {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.project-card__controls button {
+  pointer-events: all;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  color: var(--dark);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.project-card__controls button:hover {
+  transform: translateY(-1px);
+}
+
+.project-card__dots {
+  display: flex;
+  gap: 6px;
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  pointer-events: all;
+}
+
+.project-card__dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(15, 23, 42, 0.18);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.project-card__dots button.is-active {
+  background: var(--primary);
+  width: 18px;
+  border-radius: 999px;
+}
+
+.project-card__info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-card__info h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.project-card__info p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.project-card__price {
+  margin-top: 6px;
+  font-weight: 700;
+  color: var(--primary);
+}
